@@ -1,0 +1,22 @@
+SITE EDITÁVEL — LUKAS VOICE
+
+Arquivos:
+- index.html: textos, links, preços, seções e formulário.
+- styles.css: cores, fontes, espaçamento e aparência responsiva.
+- script.js: menu mobile e formulário que monta mensagem para o WhatsApp.
+
+COMO VISUALIZAR:
+1. Extraia todos os arquivos para uma pasta.
+2. Abra index.html no Chrome.
+3. Para publicar, envie os três arquivos para a hospedagem que serve o domínio.
+
+IMPORTANTE:
+- Este pacote é uma versão-base nova e editável, não uma cópia recuperada dos arquivos originais do site.
+- Antes de substituir qualquer arquivo do site publicado, faça backup dos arquivos atuais e confirme qual plataforma/hospedagem está em uso.
+- A área da foto principal é um espaço reservado. Para adicionar sua foto, coloque o arquivo na pasta e substitua o bloco .photo-placeholder no index.html por:
+  <img src="sua-foto.jpg" alt="Lukas Voice" class="artist-photo">
+  Depois adicione ao styles.css:
+  .artist-photo { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+  Ajuste .hero-art { overflow:hidden; } e mantenha o selo .stamp acima da foto com z-index.
+- O vídeo está configurado para o link do YouTube informado; se o vídeo não estiver público ou não permitir incorporação, substitua o ID do iframe.
+- Confirme os preços, disponibilidade, repertório e links antes de publicar.
