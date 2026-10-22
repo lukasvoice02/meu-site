@@ -383,3 +383,36 @@
     transition: none;
   }
 }
+
+/* CORREÇÃO DEFINITIVA DA POSIÇÃO DO PLAYER */
+body .lv-player {
+  position: fixed !important;
+  top: 18px !important;
+  right: 22px !important;
+  bottom: auto !important;
+  left: auto !important;
+  z-index: 2147483647 !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+body .lv-player-painel {
+  position: absolute !important;
+  top: 76px !important;
+  right: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+}
+
+@media (max-width: 480px) {
+  body .lv-player {
+    top: 12px !important;
+    right: 12px !important;
+  }
+
+  body .lv-player-painel {
+    top: 64px !important;
+    right: 0 !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+}
