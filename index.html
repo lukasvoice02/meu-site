@@ -478,17 +478,64 @@
       window.open('https://wa.me/5571992621803?text=' + encodeURIComponent(message), '_blank', 'noopener');
     });
   </script>
+
 <!-- PLAYER FLUTUANTE LUKAS VOICE -->
-<div class="player-flutuante">
-  <iframe
-    src="https://open.spotify.com/embed/album/0DYz91r2sdkjcs9b5yhq4P?utm_source=generator"
-    title="Ouça Lukas Voice"
-    width="100%"
-    height="80"
-    style="border:0;border-radius:12px"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-  </iframe>
+<div class="lv-player">
+  <button
+    class="lv-player-botao"
+    id="lvPlayerBotao"
+    type="button"
+    aria-label="Abrir player de música"
+    aria-expanded="false">
+    <span id="lvPlayerIcone">▶</span>
+  </button>
+
+  <div class="lv-player-painel" id="lvPlayerPainel" hidden>
+    <div class="lv-player-topo">
+      <strong>LUKAS VOICE</strong>
+      <button
+        type="button"
+        id="lvPlayerFechar"
+        aria-label="Fechar player">✕</button>
+    </div>
+
+    <iframe
+      src="https://open.spotify.com/embed/album/0DYz91r2sdkjcs9b5yhq4P?utm_source=generator"
+      title="Ouça Nós Tá Como — Lukas Voice"
+      width="100%"
+      height="152"
+      style="border:0;border-radius:12px"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
 </div>
+
+<script>
+(() => {
+  const botao = document.getElementById('lvPlayerBotao');
+  const painel = document.getElementById('lvPlayerPainel');
+  const fechar = document.getElementById('lvPlayerFechar');
+  const icone = document.getElementById('lvPlayerIcone');
+
+  function abrirPlayer(aberto) {
+    painel.hidden = !aberto;
+    botao.setAttribute('aria-expanded', String(aberto));
+    botao.setAttribute(
+      'aria-label',
+      aberto ? 'Fechar player de música' : 'Abrir player de música'
+    );
+    icone.textContent = aberto ? '♫' : '▶';
+  }
+
+  botao.addEventListener('click', () => {
+    abrirPlayer(painel.hidden);
+  });
+
+  fechar.addEventListener('click', () => {
+    abrirPlayer(false);
+  });
+})();
+</script>
 </body>
 </html>
