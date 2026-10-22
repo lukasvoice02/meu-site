@@ -331,9 +331,22 @@
   box-shadow: 0 10px 35px rgba(0, 0, 0, .4);
 }
 
-.lv-player-painel[hidden] {
-  display: none;
+
+.lv-player-painel {
+  position: absolute;
+  top: 76px;
+  right: 0;
+  bottom: auto;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  padding: 10px;
+  border: 1px solid #d71920;
+  border-radius: 16px;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .4);
 }
+
 
 .lv-player-topo {
   display: flex;
@@ -354,16 +367,15 @@
 }
 
 @media (max-width: 480px) {
-  .lv-player {
-    right: 14px;
-    bottom: 14px;
-  }
-
-  .lv-player-botao {
-    width: 56px;
-    height: 56px;
-  }
+ .lv-player {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  bottom: auto;
+  z-index: 99999;
+  font-family: inherit;
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .lv-player-botao {
