@@ -290,129 +290,25 @@
     transform: none;
   }
 
-/* PLAYER FLUTUANTE LUKAS VOICE */
+
+/* PLAYER AO LADO DA LOGO */
 .lv-player {
-  position: fixed;
-  top: 18px;
-  right: 22px;
+  position: relative;
+  top: auto;
+  right: auto;
   bottom: auto;
   left: auto;
-  z-index: 99999;
+  z-index: 10;
+  flex-shrink: 0;
   font-family: inherit;
 }
 
-/* BOTÃO REDONDO */
-.lv-player-botao {
-  width: 62px;
-  height: 62px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background: #d71920;
-  color: #fff;
-  font-size: 25px;
-  cursor: pointer;
-  box-shadow: 0 5px 22px rgba(215, 25, 32, 0.45);
-  transition: transform .25s ease,
-              box-shadow .25s ease;
-}
-
-.lv-player-botao:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 28px rgba(215, 25, 32, 0.6);
-}
-
-/* PAINEL ABAIXO DO BOTÃO */
 .lv-player-painel {
   position: absolute;
   top: 76px;
   right: 0;
   bottom: auto;
+  left: auto;
   width: 320px;
   max-width: calc(100vw - 32px);
-  box-sizing: border-box;
-  padding: 10px;
-  border: 1px solid #d71920;
-  border-radius: 16px;
-  background: #111;
-  color: #fff;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, .4);
-}
-
-.lv-player-topo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3px 4px 10px;
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.lv-player-topo button {
-  border: 0;
-  background: transparent;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* CELULAR */
-@media (max-width: 480px) {
-  .lv-player {
-    top: 12px;
-    right: 12px;
-  }
-
-  .lv-player-botao {
-    width: 54px;
-    height: 54px;
-    font-size: 22px;
-  }
-
-  .lv-player-painel {
-    top: 64px;
-    right: 0;
-    width: 300px;
-    max-width: calc(100vw - 24px);
-  }
-}
-
-/* ACESSIBILIDADE */
-@media (prefers-reduced-motion: reduce) {
-  .lv-player-botao {
-    transition: none;
-  }
-}
-
-/* CORREÇÃO DEFINITIVA DA POSIÇÃO DO PLAYER */
-body .lv-player {
-  position: fixed !important;
-  top: 18px !important;
-  right: 22px !important;
-  bottom: auto !important;
-  left: auto !important;
-  z-index: 2147483647 !important;
-  margin: 0 !important;
-  transform: none !important;
-}
-
-body .lv-player-painel {
-  position: absolute !important;
-  top: 76px !important;
-  right: 0 !important;
-  bottom: auto !important;
-  left: auto !important;
-}
-
-@media (max-width: 480px) {
-  body .lv-player {
-    top: 12px !important;
-    right: 12px !important;
-  }
-
-  body .lv-player-painel {
-    top: 64px !important;
-    right: 0 !important;
-    max-width: calc(100vw - 24px) !important;
-  }
 }
