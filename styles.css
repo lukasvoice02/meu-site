@@ -293,12 +293,15 @@
 /* PLAYER FLUTUANTE LUKAS VOICE */
 .lv-player {
   position: fixed;
+  top: 18px;
   right: 22px;
-  bottom: 22px;
+  bottom: auto;
+  left: auto;
   z-index: 99999;
   font-family: inherit;
 }
 
+/* BOTÃO REDONDO */
 .lv-player-botao {
   width: 62px;
   height: 62px;
@@ -309,7 +312,8 @@
   font-size: 25px;
   cursor: pointer;
   box-shadow: 0 5px 22px rgba(215, 25, 32, 0.45);
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease,
+              box-shadow .25s ease;
 }
 
 .lv-player-botao:hover {
@@ -317,21 +321,7 @@
   box-shadow: 0 8px 28px rgba(215, 25, 32, 0.6);
 }
 
-.lv-player-painel {
-  position: absolute;
-  right: 0;
-  bottom: 76px;
-  width: 320px;
-  max-width: calc(100vw - 32px);
-  padding: 10px;
-  border: 1px solid #d71920;
-  border-radius: 16px;
-  background: #111;
-  color: #fff;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, .4);
-}
-
-
+/* PAINEL ABAIXO DO BOTÃO */
 .lv-player-painel {
   position: absolute;
   top: 76px;
@@ -339,6 +329,7 @@
   bottom: auto;
   width: 320px;
   max-width: calc(100vw - 32px);
+  box-sizing: border-box;
   padding: 10px;
   border: 1px solid #d71920;
   border-radius: 16px;
@@ -346,7 +337,6 @@
   color: #fff;
   box-shadow: 0 10px 35px rgba(0, 0, 0, .4);
 }
-
 
 .lv-player-topo {
   display: flex;
@@ -366,17 +356,28 @@
   cursor: pointer;
 }
 
+/* CELULAR */
 @media (max-width: 480px) {
- .lv-player {
-  position: fixed;
-  top: 18px;
-  right: 22px;
-  bottom: auto;
-  z-index: 99999;
-  font-family: inherit;
+  .lv-player {
+    top: 12px;
+    right: 12px;
+  }
+
+  .lv-player-botao {
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+  }
+
+  .lv-player-painel {
+    top: 64px;
+    right: 0;
+    width: 300px;
+    max-width: calc(100vw - 24px);
+  }
 }
 
-
+/* ACESSIBILIDADE */
 @media (prefers-reduced-motion: reduce) {
   .lv-player-botao {
     transition: none;
