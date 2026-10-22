@@ -218,3 +218,9 @@
   font-size: 32px;
   font-weight: 700;
 }
+
+/* Aumentar a fonte do menu principal */
+.site-header .nav a {
+  font-size: 18px;
+  font-weight: 600;
+}
