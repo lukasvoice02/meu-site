@@ -59,3 +59,40 @@
 .section-label {
   visibility: hidden;
 }
+
+/* Player de música no cabeçalho */
+.header-player {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.player-titulo {
+  color: #e50914;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-player audio {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: 38px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 760px) {
+  .header-player {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .header-player audio {
+    width: 220px;
+    max-width: 100%;
+  }
+}
