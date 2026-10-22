@@ -42,4 +42,16 @@
     grid-template-columns: 1fr;
   }
 }
+.videos > h2 {
+  display: block;
+  width: 100%;
+  margin: 0 0 28px;
+  color: #e50914;
+  text-align: left;
+}
 
+.grade-videos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
