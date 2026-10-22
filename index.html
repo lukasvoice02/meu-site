@@ -491,31 +491,4 @@
   </div>
 </div>
 
-<script>
-(() => {
-  const botao = document.getElementById('lvPlayerBotao');
-  const painel = document.getElementById('lvPlayerPainel');
-  const fechar = document.getElementById('lvPlayerFechar');
-  const icone = document.getElementById('lvPlayerIcone');
 
-  function abrirPlayer(aberto) {
-    painel.hidden = !aberto;
-    botao.setAttribute('aria-expanded', String(aberto));
-    botao.setAttribute(
-      'aria-label',
-      aberto ? 'Fechar player de música' : 'Abrir player de música'
-    );
-    icone.textContent = aberto ? '♫' : '▶';
-  }
-
-  botao.addEventListener('click', () => {
-    abrirPlayer(painel.hidden);
-  });
-
-  fechar.addEventListener('click', () => {
-    abrirPlayer(false);
-  });
-})();
-</script>
-</body>
-</html>
