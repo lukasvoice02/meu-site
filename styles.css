@@ -224,3 +224,12 @@
   font-size: 18px;
   font-weight: 600;
 }
+
+/* Centralizar e enquadrar a foto da capa */
+.photo-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
