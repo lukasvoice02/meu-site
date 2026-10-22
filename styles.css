@@ -233,3 +233,17 @@
   object-fit: cover;
   object-position: center 35%;
 }
+
+/* FOTO PRINCIPAL — CAPA LUKAS VOICE */
+.hero-art {
+  overflow: hidden;
+}
+
+.hero-art .foto-inicio {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: inherit;
+}
