@@ -138,3 +138,32 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Restaurar o vídeo em destaque sem alterar a grade de músicas */
+.video-wrap {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Evitar que a seção de vídeo seja comprimida */
+.video-wrap h3,
+.video-wrap p {
+  max-width: 100%;
+}
