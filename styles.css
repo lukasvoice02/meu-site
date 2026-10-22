@@ -212,3 +212,9 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Aumentar o título Vídeo em destaque */
+.video-wrap h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
