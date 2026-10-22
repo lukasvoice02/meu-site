@@ -289,26 +289,3 @@
   .button:active {
     transform: none;
   }
-
-
-/* PLAYER AO LADO DA LOGO */
-.lv-player {
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  z-index: 10;
-  flex-shrink: 0;
-  font-family: inherit;
-}
-
-.lv-player-painel {
-  position: absolute;
-  top: 76px;
-  right: 0;
-  bottom: auto;
-  left: auto;
-  width: 320px;
-  max-width: calc(100vw - 32px);
-}
