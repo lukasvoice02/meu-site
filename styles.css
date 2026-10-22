@@ -55,3 +55,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
+/* Ocultar apenas os números e etiquetas das seções */
+.section-label {
+  visibility: hidden;
+}
