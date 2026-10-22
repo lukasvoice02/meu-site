@@ -247,3 +247,46 @@
   object-position: center 35%;
   border-radius: inherit;
 }
+
+/* ANIMAÇÃO DOS BOTÕES — LUKAS VOICE */
+.button {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Botão vermelho */
+.button.primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  background-color: #f02028;
+  box-shadow: 0 8px 24px rgba(215, 25, 32, 0.4);
+}
+
+/* Botão secundário */
+.button.secondary:hover {
+  transform: translateY(-4px);
+  border-color: #d71920;
+  color: #ff555b;
+  box-shadow: 0 6px 20px rgba(215, 25, 32, 0.2);
+}
+
+/* Efeito ao clicar */
+.button:active {
+  transform: scale(0.97);
+}
+
+/* Acessibilidade: respeita a preferência por menos animações */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .button:hover,
+  .button:active {
+    transform: none;
+  }
+}
