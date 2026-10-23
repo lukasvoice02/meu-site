@@ -290,18 +290,4 @@
     transform: none;
   }
 
-/* Efeito vermelho suave na grade inicial */
-.hero::before {
-  border: none;
-  outline: none;
-  border-radius: 0;
-  box-shadow: none;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(220, 0, 0, 0.38) 0%,
-    rgba(180, 0, 0, 0.16) 45%,
-    transparent 75%
-  );
-  filter: blur(35px);
-  pointer-events: none;
-}
+
