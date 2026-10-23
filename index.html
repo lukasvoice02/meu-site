@@ -681,73 +681,75 @@ header .logo:hover img {
   transform: translateY(-1px);
 }
 
-/* LUKAS VOICE — iluminação vermelha na grade de músicas */
+
+/* LUKAS VOICE — fumaça vermelha atrás das músicas */
 #musicas {
   position: relative;
   isolation: isolate;
-  background:
-    radial-gradient(
-      ellipse at 8% 45%,
-      rgba(215, 25, 32, 0.13),
-      transparent 48%
-    ),
-    radial-gradient(
-      ellipse at 92% 65%,
-      rgba(215, 25, 32, 0.16),
-      transparent 48%
-    );
+  background: #101010;
 }
 
-/* Reflexos vermelhos animados atrás dos players */
 #musicas .music-grid {
   position: relative;
   isolation: isolate;
 }
 
+/* Nuvens difusas, sem bordas quadradas */
 #musicas .music-grid::before {
   content: "";
   position: absolute;
   z-index: -1;
   pointer-events: none;
-  inset: -24px;
+  inset: -65px -45px;
   background:
     radial-gradient(
-      ellipse at 15% 35%,
-      rgba(230, 20, 38, 0.28),
-      transparent 48%
+      ellipse at 18% 35%,
+      rgba(220, 15, 35, 0.30) 0%,
+      rgba(180, 10, 25, 0.16) 25%,
+      transparent 58%
     ),
     radial-gradient(
-      ellipse at 85% 65%,
-      rgba(180, 10, 25, 0.25),
-      transparent 48%
+      ellipse at 78% 65%,
+      rgba(235, 20, 40, 0.27) 0%,
+      rgba(160, 5, 25, 0.13) 28%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 50% 50%,
+      rgba(120, 0, 15, 0.18) 0%,
+      transparent 68%
     );
-  filter: blur(24px);
-  opacity: 0.85;
-  animation: lv-music-glow 6s ease-in-out infinite alternate;
+  filter: blur(38px);
+  opacity: 0.9;
+  animation: lv-fumaca 9s ease-in-out infinite alternate;
 }
 
-/* Cards escuros para destacar os players */
+/* Players sem bordas vermelhas marcadas */
 #musicas .music-card {
   position: relative;
   z-index: 1;
-  background: rgba(20, 16, 16, 0.96);
-  border: 1px solid rgba(215, 25, 32, 0.32);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  background: rgba(16, 16, 16, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 #musicas .music-card:hover {
-  border-color: rgba(255, 55, 65, 0.75);
   transform: translateY(-3px);
 }
 
-@keyframes lv-music-glow {
-  from {
-    opacity: 0.55;
-    transform: scale(0.98);
+@keyframes lv-fumaca {
+  0% {
+    transform: translate(-10px, 5px) scale(0.96);
+    opacity: 0.65;
   }
-  to {
-    opacity: 1;
-    transform: scale(1.02);
+  50% {
+    transform: translate(8px, -7px) scale(1.03);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-3px, 4px) scale(1.06);
+    opacity: 0.75;
   }
 }
 
@@ -760,6 +762,7 @@ header .logo:hover img {
     transition: none;
   }
 }
+
 </style>
 </head>
 <body>
