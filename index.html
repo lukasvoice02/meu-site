@@ -506,6 +506,62 @@ a.whatsapp-float svg path {
     min-width: 42px !important;
   }
 }
+
+/* Animação do menu Lukas Voice */
+nav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: menu-entrada 0.7s ease-out both;
+}
+
+nav a:nth-child(1) { animation-delay: 0.10s; }
+nav a:nth-child(2) { animation-delay: 0.20s; }
+nav a:nth-child(3) { animation-delay: 0.30s; }
+nav a:nth-child(4) { animation-delay: 0.40s; }
+nav a:nth-child(5) { animation-delay: 0.50s; }
+
+/* Linha vermelha que aparece embaixo */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #e31e35;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #e31e35;
+  transform: translateY(-2px);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes menu-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a {
+    animation: none;
+    transition: none;
+  }
+}
 </style>
 </head>
 <body>
