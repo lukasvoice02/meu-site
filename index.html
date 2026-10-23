@@ -400,6 +400,77 @@
     transition: none;
   }
 }
+
+/* Animação da logo Lukas Voice */
+.logo img {
+  transform-origin: center;
+  animation: logo-entrada 1.2s ease-out both,
+             logo-brilho 3s ease-in-out 1.2s infinite;
+}
+
+@keyframes logo-entrada {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+    filter: brightness(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes logo-brilho {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 rgba(255, 35, 55, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 35, 55, 0.7));
+  }
+}
+
+/* Palavras entrando uma por uma */
+.lv-palavras span {
+  display: inline-block;
+  opacity: 0;
+  animation: palavra-entrada 0.7s ease-out forwards;
+}
+
+.lv-palavras span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.lv-palavras span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.lv-palavras span:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+@keyframes palavra-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo img,
+  .lv-palavras span {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -420,6 +491,11 @@
   <main>
     <section class="hero lv-cinema" id="inicio">
       <div class="hero-content">
+        <div class="lv-palavras">
+          <span>SAMBA</span>
+          <span> • PAGODE</span>
+          <span> • ALEGRIA</span>
+        </div>
         <p class="eyebrow">SAMBA • PAGODE • ALEGRIA</p>
         <h1 class="lv-title">LUKAS VOICE<br><span>Seu evento merece um show inesquecível.</span></h1>
         <p class="lead lv-subtitle">Samba e pagode com identidade, alegria e musicalidade para transformar seu evento em um momento especial.</p>
