@@ -297,9 +297,13 @@
               box-shadow 0.25s ease;
 }
 
-.lv-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(220, 20, 45, 0.28);
+/* Efeito vermelho discreto nos botões */
+.lv-cta:hover,
+.actions a:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 8px rgba(227, 30, 53, 0.25);
+  transition: all 0.25s ease;
 }
 
 @keyframes lv-fade-up {
