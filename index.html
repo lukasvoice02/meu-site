@@ -838,6 +838,88 @@ header .logo:hover img {
   display: inline-block;
   letter-spacing: 0;
 }
+
+/* LUKAS VOICE — identidade tipográfica global */
+:root {
+  --font-main: 'Montserrat', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-main);
+}
+
+body {
+  letter-spacing: -0.15px;
+}
+
+/* Títulos principais */
+h1,
+h2,
+h3,
+h4,
+.section-heading h2,
+.hero h1 {
+  font-family: var(--font-main);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.12;
+}
+
+/* Subtítulos e textos */
+p,
+li,
+label,
+small,
+nav a,
+.button,
+button {
+  font-family: var(--font-main);
+}
+
+/* Palavras em destaque cursivo e vermelho */
+h1 em,
+h2 em,
+h3 em,
+.script,
+.destaque-cursivo {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--red);
+  letter-spacing: 0;
+}
+
+/* Textos dos cartões */
+.music-card h3,
+.event-card h3,
+.format-card h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Campos de formulário */
+input,
+textarea,
+select {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  h1,
+  h2,
+  h3,
+  .section-heading h2 {
+    letter-spacing: -0.6px;
+  }
+}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
