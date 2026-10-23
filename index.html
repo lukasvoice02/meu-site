@@ -359,6 +359,47 @@
     transition: none;
   }
 }
+
+/* Animação da frase de assinatura Lukas Voice */
+.photo-caption {
+  animation: assinatura-entrada 1.2s ease-out both;
+  animation-delay: 1s;
+  text-shadow: 0 0 12px rgba(220, 20, 45, 0.45);
+}
+
+@keyframes assinatura-entrada {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+    letter-spacing: 1px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: normal;
+  }
+}
+
+/* Brilho suave ao passar o mouse */
+.photo-caption {
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.photo-caption:hover {
+  color: #ff3048;
+  text-shadow: 0 0 8px rgba(255, 48, 72, 0.65),
+               0 0 20px rgba(255, 48, 72, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-caption {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 </style>
 </head>
 <body>
