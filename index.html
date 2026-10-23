@@ -106,20 +106,34 @@
     .primary:hover { background: var(--red-dark); }
     .secondary { border-color: #666; background: transparent; color: white; }
    
+
 .hero-art {
   position: relative;
+  isolation: isolate;
   min-height: 420px;
   height: min(55vw, 540px);
   max-height: 540px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 12px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  z-index: -1;
+  pointer-events: none;
   background: radial-gradient(
-    circle at 50% 20%,
-    rgba(130, 20, 28, 0.45) 0%,
-    rgba(70, 15, 20, 0.25) 35%,
-    #171313 70%,
-    #111 100%
+    ellipse at 50% 45%,
+    rgba(220, 0, 20, 0.24) 0%,
+    rgba(180, 0, 15, 0.13) 35%,
+    rgba(100, 0, 10, 0.05) 58%,
+    transparent 75%
   );
+  filter: blur(45px);
   border: none;
   box-shadow: none;
 }
@@ -130,7 +144,9 @@
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
+  border-radius: 12px;
 }
+
 
     .photo-caption {
       position: absolute;
