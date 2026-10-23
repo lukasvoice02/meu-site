@@ -763,6 +763,58 @@ header .logo:hover img {
   }
 }
 
+
+/* Lukas Voice — fumaça vermelha discreta nas grades */
+#eventos,
+#formatos {
+  position: relative;
+  isolation: isolate;
+}
+
+#eventos::before,
+#formatos::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 8% 0;
+  background:
+    radial-gradient(
+      ellipse at 20% 55%,
+      rgba(215, 25, 32, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 75% 45%,
+      rgba(215, 25, 32, 0.12),
+      transparent 52%
+    );
+  filter: blur(45px);
+  opacity: 0.8;
+}
+
+/* Cartões escuros e elegantes */
+#eventos .event-card,
+#formatos .format-card {
+  background: rgba(16, 16, 16, 0.88);
+  border: 1px solid rgba(215, 25, 32, 0.28);
+  border-radius: 14px;
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
+}
+
+#eventos .event-card:hover,
+#formatos .format-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(215, 25, 32, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #eventos .event-card,
+  #formatos .format-card {
+    transition: none;
+  }
+}
 </style>
 </head>
 <body>
