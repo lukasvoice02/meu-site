@@ -617,52 +617,44 @@ header .logo:hover img {
     opacity: 1 !important;
   }
 }
-
-/* Corrige o brilho excessivo no botão Assistir prévia do show */
-.actions a:hover,
-.actions button:hover {
-  box-shadow: 0 2px 6px rgba(227, 30, 53, 0.18) !important;
-  filter: none !important;
-  transform: translateY(-1px);
-}
-
-.actions a,
-.actions button {
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Lukas Voice — corrigir brilho que vaza dos botões */
-.actions a,
-.actions a:hover,
-.actions button,
-.actions button:hover {
+  
+/* LUKAS VOICE — remover brilho excessivo dos botões */
+.button,
+.button.primary,
+.button.secondary {
   box-shadow: none !important;
   filter: none !important;
   text-shadow: none !important;
+  -webkit-filter: none !important;
 }
 
-/* Brilho sutil, apenas próximo ao botão */
-.actions a:hover,
-.actions button:hover {
-  box-shadow: 0 0 3px rgba(227, 30, 53, 0.20) !important;
-  transform: translateY(-1px);
-}
-
-/* Evita efeitos de brilho criados por pseudo-elementos */
-.actions a::before,
-.actions a::after,
-.actions button::before,
-.actions button::after {
+/* Hover sem sombra externa */
+.button:hover,
+.button.primary:hover,
+.button.secondary:hover,
+.button:focus,
+.button:active {
   box-shadow: none !important;
   filter: none !important;
+  -webkit-filter: none !important;
+  text-shadow: none !important;
 }
 
-/* Respeita o formato original dos botões */
-.actions a,
-.actions button {
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Desativar brilhos criados por pseudo-elementos */
+.button::before,
+.button::after,
+.button.primary::before,
+.button.primary::after,
+.button.secondary::before,
+.button.secondary::after {
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Movimento discreto, sem brilho vermelho */
+.button:hover {
+  transform: translateY(-1px);
 }
 </style>
 </head>
