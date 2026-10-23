@@ -211,19 +211,45 @@
     }
     .footer p { margin: 0; }
     .footer a { color: #ff6268; text-decoration: none; }
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 30;
-      padding: 13px 17px;
-      background: #19a75a;
-      color: white;
-      border-radius: 999px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.35);
-      text-decoration: none;
-      font-weight: 900;
-    }
+    
+/* Botão WhatsApp redondo e discreto */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  opacity: 0.85;
+  z-index: 9999;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.whatsapp-float:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.whatsapp-float svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 42px;
+    height: 42px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
     @media (max-width: 800px) {
       .site-header { min-height: 68px; }
       .menu-toggle { display: block; }
