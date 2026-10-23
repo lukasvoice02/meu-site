@@ -631,6 +631,39 @@ header .logo:hover img {
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+/* Lukas Voice — corrigir brilho que vaza dos botões */
+.actions a,
+.actions a:hover,
+.actions button,
+.actions button:hover {
+  box-shadow: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Brilho sutil, apenas próximo ao botão */
+.actions a:hover,
+.actions button:hover {
+  box-shadow: 0 0 3px rgba(227, 30, 53, 0.20) !important;
+  transform: translateY(-1px);
+}
+
+/* Evita efeitos de brilho criados por pseudo-elementos */
+.actions a::before,
+.actions a::after,
+.actions button::before,
+.actions button::after {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Respeita o formato original dos botões */
+.actions a,
+.actions button {
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 </style>
 </head>
 <body>
