@@ -617,6 +617,20 @@ header .logo:hover img {
     opacity: 1 !important;
   }
 }
+
+/* Corrige o brilho excessivo no botão Assistir prévia do show */
+.actions a:hover,
+.actions button:hover {
+  box-shadow: 0 2px 6px rgba(227, 30, 53, 0.18) !important;
+  filter: none !important;
+  transform: translateY(-1px);
+}
+
+.actions a,
+.actions button {
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 </style>
 </head>
 <body>
