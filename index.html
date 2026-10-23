@@ -255,6 +255,111 @@
       .whatsapp-float { right: 12px; bottom: 12px; }
     }
   </style>
+
+<style>
+/* Abertura cinematográfica — Lukas Voice */
+.lv-cinema {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.lv-cinema::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 75% 45%,
+      rgba(220, 20, 45, 0.24),
+      transparent 58%
+    );
+  animation: lv-light-in 1.6s ease-out both;
+}
+
+.lv-reveal {
+  opacity: 0;
+  animation: lv-fade-up 0.9s ease-out forwards;
+}
+
+.lv-photo {
+  opacity: 0;
+  transform: scale(0.94);
+  animation: lv-photo-in 1.3s ease-out 0.15s forwards;
+}
+
+.lv-title {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: lv-fade-up 0.9s ease-out 0.4s forwards;
+}
+
+.lv-subtitle {
+  opacity: 0;
+  animation: lv-fade-up 0.8s ease-out 0.7s forwards;
+}
+
+.lv-cta {
+  opacity: 0;
+  animation: lv-fade-up 0.8s ease-out 0.95s forwards;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.lv-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(220, 20, 45, 0.28);
+}
+
+@keyframes lv-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lv-photo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+    filter: brightness(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes lv-light-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lv-cinema::before,
+  .lv-reveal,
+  .lv-photo,
+  .lv-title,
+  .lv-subtitle,
+  .lv-cta {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .lv-cta {
+    transition: none;
+  }
+}
+</style>
 </head>
 <body>
   <header class="site-header">
