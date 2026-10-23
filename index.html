@@ -105,24 +105,33 @@
     .primary { background: var(--red); color: white; }
     .primary:hover { background: var(--red-dark); }
     .secondary { border-color: #666; background: transparent; color: white; }
-    .hero-art {
-      position: relative;
-      min-height: 420px;
-      height: min(55vw, 540px);
-      max-height: 540px;
-      overflow: hidden;
-      border-radius: 12px;
-      background: radial-gradient(circle at 50% 20%, #522326, #222 55%, #111);
-      border: 1px solid #393939;
-      box-shadow: 0 25px 70px rgba(215,25,32,.12);
-    }
-    .foto-inicio {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 35%;
-    }
+   
+.hero-art {
+  position: relative;
+  min-height: 420px;
+  height: min(55vw, 540px);
+  max-height: 540px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(130, 20, 28, 0.45) 0%,
+    rgba(70, 15, 20, 0.25) 35%,
+    #171313 70%,
+    #111 100%
+  );
+  border: none;
+  box-shadow: none;
+}
+
+.foto-inicio {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
     .photo-caption {
       position: absolute;
       bottom: 16px;
